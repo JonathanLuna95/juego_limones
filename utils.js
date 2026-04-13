@@ -1,0 +1,9 @@
+function generarAleatorio(min,max){
+    let random=Math.random(); // 0-1
+    // ejemplo: max es 600, minimo es 5
+    let numero=random*(max-min); // 0-max  0 hasta 595
+    let numeroEntero = Math.ceil(numero);
+    // ejemplo: 0
+    numeroEntero = numeroEntero + min; // 5-600
+    return numeroEntero
+}
