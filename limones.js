@@ -91,6 +91,7 @@ function detectarAtrapado(){
         }
 
         if(puntaje == 10){
+            clearInterval(intervalo);
             alert("TIENES LOS LIMONES, AHORA TE FALTA SAL Y TEQUILA");
         }
     }
@@ -110,6 +111,7 @@ function detectarPiso(){
         mostrarEnSpan("txtVidas",vidas);
 
         if(vidas == 0){
+            clearInterval(intervalo);
             alert("GAME OVER");
         }
     }
@@ -119,4 +121,23 @@ function detectarPiso(){
 function actualizarVelocidad(){
     clearInterval(intervalo);
     intervalo=setInterval(bajarLimon,velocidadCaida);
+}
+
+function reiniciar(){
+    clearInterval(intervalo);
+
+    puntaje=0;
+    vidas=3;
+    velocidadCaida=200;
+
+    personajeX = canvas.width /2;
+    personajeY = canvas.height - (ALTURA_SUELO + ALTURA_PERSONAJE);
+
+    limonX = canvas.width / 2;
+    limonY = 0;
+
+    mostrarEnSpan("txtPuntaje", puntaje);
+    mostrarEnSpan("txtVidas", vidas);
+
+    iniciar();
 }
