@@ -1,27 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Caza Estrellas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atrapar Limones</title>
   <link rel="stylesheet" href="limones.css" />
-  <script src="utils.js" ></script>
- 
+  <script src="utils.js"></script>
 </head>
 <body onload="iniciar()">
-  <div class="contenedor">
-    <h1>Atrapar Limones</h1>
-    <p>Si del cielo te caen limones, por que no tomar un Tequila </p>
-    <h2>Autor: Jonathan Luna</h2>
-    <canvas id="areaJuego" width="600" height="400"></canvas>
-    <div class="panel">
-      <p>Puntaje: <span id="txtPuntaje">0</span></p>
-      <p>Vidas: <span id="txtVidas">3</span></p>
-    </div>
-    <div class="botones">
-      <button onclick="moverIzquierda()">Izquierda</button>
-      <button onclick="moverDerecha()">Derecha</button>
-      <button onclick="reiniciar()" id="btnReiniciar">Reiniciar</button>
-    </div>
-  </div>
+  <div class="fondo-overlay"></div>
+
+  <main class="game-shell">
+    <header class="topbar">
+      <div class="brand">
+        <p class="tag">Arcade Premium Mode</p>
+        <h1>Atrapar Limones</h1>
+        <p class="frase">Si del cielo te caen limones, ¿por qué no tomar un tequila?</p>
+        <p class="autor">Autor: Jonathan Luna</p>
+      </div>
+    </header>
+
+    <section class="game-layout">
+      <div class="game-card">
+        <div class="game-card-header">
+          <span class="indicator"></span>
+          <p>Zona de juego</p>
+        </div>
+
+        <div class="game-content">
+          <div class="stats-column">
+            <div class="stat-box">
+              <span class="stat-label">Puntaje</span>
+              <span class="stat-value" id="txtPuntaje">0</span>
+            </div>
+
+            <div class="stat-box">
+              <span class="stat-label">Vidas</span>
+              <span class="stat-value" id="txtVidas">3</span>
+            </div>
+          </div>
+
+          <div class="canvas-frame">
+            <canvas id="areaJuego" width="600" height="400"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <aside class="control-card">
+        <h2>Controles</h2>
+        <p class="control-text">
+          Muévete rápidamente para atrapar los limones y mantenerte con vida el mayor tiempo posible.
+        </p>
+
+        <div class="botones-direccion">
+          <button onclick="moverIzquierda()" class="btn-flecha">⬅</button>
+          <button onclick="moverDerecha()" class="btn-flecha">➡</button>
+        </div>
+
+        <button onclick="reiniciar()" id="btnReiniciar">Reiniciar</button>
+      </aside>
+    </section>
+  </main>
+
   <script src="limones.js"></script>
 </body>
 </html>
