@@ -30,7 +30,7 @@ function dibujarSuelo(){
 }
 
 function dibujarPersonaje(){
-    ctx.fillStyle="#f6ff00"
+    ctx.fillStyle="#002fff"
     ctx.fillRect(personajeX,personajeY,ANCHO_PERSONAJE,ALTURA_PERSONAJE);
 }
 
@@ -59,7 +59,7 @@ function limpiarCanva(){
 }
 
 function dibujarLimon(){
-    ctx.fillStyle="#1eff00";
+    ctx.fillStyle="#ffffff";
     ctx.fillRect(limonX,limonY,ANCHO_LIMON,ALTURA_LIMON);
 }
 
