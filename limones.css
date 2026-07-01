@@ -167,7 +167,7 @@ h1 {
   display: block;
   font-size: 64px;
   font-weight: 800;
-  color: #8ef6ff;
+  color: #00d0e3;
   line-height: 1;
   text-shadow: 0 0 18px rgba(142, 246, 255, 0.22);
 }
@@ -189,7 +189,7 @@ canvas {
   height: auto;
   margin: 0 auto;
   background: linear-gradient(180deg, #06111f 0%, #0b1b2f 100%);
-  border: 3px solid #73f5ff;
+  border: 3px solid #02bcca;
   border-radius: 0;
   box-shadow:
     0 0 0 4px rgba(255, 255, 255, 0.03),
